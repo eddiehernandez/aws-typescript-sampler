@@ -1,0 +1,17 @@
+{
+  "name": "aws-typescript-sampler",
+  "version": "1.0.0",
+  "main": "handler.ts",
+  "scripts": {
+    "local-hello": "serverless invoke local -f hello",
+    "local-api": "serverless offline start --printOutput",
+    "deploy": "serverless deploy --verbose",
+    "remote-hello": "serverless invoke -f hello",
+    "remove": "serverless remove"
+  },
+  "devDependencies": {
+    "serverless-offline": "^9.0.0",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.7.4"
+  }
+}

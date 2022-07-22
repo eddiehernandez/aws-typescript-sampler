@@ -1,0 +1,21 @@
+service: aws-typescript-sampler
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-2
+  profile: eddie-personal
+  deploymentMethod: direct
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
